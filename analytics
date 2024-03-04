@@ -1,0 +1,30 @@
+
+function piResponse() {
+		piSetCookie('visitor_id829963', '622705597', 3650);
+			piSetCookie('visitor_id829963-hash', '34291aa45c8646e6daf0476dd9f5e1ddf404825bbc5a9e0e379e4dc218a0999c2e5613f8af4a2c27ff0c91c58515d464f215e20e', 3650);
+		
+		if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+		var analytics_link = document.location.protocol + "//" + "engage.ansys.com/analytics?";
+		pi.tracker.visitor_id='622705597';
+
+				pi.tracker.visitor_id_sign='34291aa45c8646e6daf0476dd9f5e1ddf404825bbc5a9e0e379e4dc218a0999c2e5613f8af4a2c27ff0c91c58515d464f215e20e';
+		
+				pi.tracker.campaign_id='102021';
+		
+		var variables = 'conly=true';
+		for (property in pi.tracker) {
+					variables += "&" + property + "=" + pi.tracker[property];
+				}
+		var headID = document.getElementsByTagName("head")[0];
+		piScriptObj[piScriptNum] = document.createElement('script');
+		piScriptObj[piScriptNum].type = 'text/javascript';
+		piScriptObj[piScriptNum].src = analytics_link + variables;
+		headID.appendChild(piScriptObj[piScriptNum]);
+		piScriptObj[piScriptNum].onload = function() { return; }
+	}
+	}
+piResponse();
+
+
+
+
